@@ -18,11 +18,6 @@ model = ChatTongyi()
 # 系统提示用于告诉Agent它的角色和任务
 system_prompt = "你是人工智能助手。需要帮助用户解决各种问题。"
 
-# 3. 创建短期记忆实例
-# InMemorySaver提供内存中的状态保存功能，用于维护对话历史
-# 这对于多轮对话非常重要，可以让Agent记住之前的交互内容
-memory = InMemorySaver()
-
 # 4. 创建Agent
 # create_agent函数创建一个具有记忆功能的智能Agent
 # 参数说明：
@@ -32,7 +27,6 @@ memory = InMemorySaver()
 agent = create_agent(
     model=model,  # 聊天模型
     system_prompt=system_prompt,
-    checkpointer=memory  # 传入记忆组件
 )
 
 # 调用Agent处理用户请求
@@ -40,9 +34,7 @@ agent = create_agent(
 # 消息格式为：{"role": "角色", "content": "消息内容"}
 # config中的thread_id用于区分不同用户的会话，确保对话状态隔离
 response = agent.invoke(
-    {"messages": [{"role": "user", "content": "你是谁"}]},
-    # 配置会话标识，用于区分不同用户
-    config={"configurable": {"thread_id": "user_1"}}  # 会话唯一标识，用于区分不同用户
+    {"messages": [{"role": "user", "content": "你是谁"}]}
 )
 # 参数传递说明：
 # 1. 第一个参数 {"messages": [{"role": "user", "content": "你是谁"}]} 作为input参数传递给invoke方法

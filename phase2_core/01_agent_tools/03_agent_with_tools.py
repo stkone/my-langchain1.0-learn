@@ -9,20 +9,14 @@ import datetime
 from langchain.agents import create_agent
 from langchain_community.chat_models import ChatTongyi
 from langchain_core.tools import tool
-from langgraph.checkpoint.memory import InMemorySaver
 
 # 模型配置
 model = ChatTongyi(
-    temperature=0,
     extra_body={"enable_search": False}
 )
 
 # 系统提示
 system_prompt = "你是人工智能助手。需要帮助用户解决各种问题。"
-
-# 内存管理器
-memory = InMemorySaver()
-
 
 # 方式二：使用@tool装饰器定义工具（这种方式更简洁）
 # 与02文件中使用Tool类的方式相比，@tool装饰器提供了更简洁的语法
@@ -67,7 +61,6 @@ def recom_drink(input: str = "") -> str:
 agent = create_agent(
     model=model,
     system_prompt=system_prompt,
-    checkpointer=memory,
     tools=[recom_drink, get_weather,get_current_time],  # 直接使用函数对象列表
 )
 # agent.bind_tools([recom_drink, get_weather,get_current_time]) 或者使用bind_tools方法
