@@ -1,5 +1,5 @@
-# my-learn-python-ai
-
+# my-langchain-learn
+langchain V1.0版本以后的学习
 个人学习目录（持续更新中）
 
 ## 目录规划
