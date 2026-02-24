@@ -10,6 +10,8 @@ ALI_TONGYI_DEEPSEEK_V3 = "deepseek-v3"
 ALI_TONGYI_REASONER_MODEL = "qvq-max-latest"
 ALI_TONGYI_EMBEDDING_MODEL = "text-embedding-v3"
 ALI_TONGYI_RERANK_MODEL = "gte-rerank-v2"
+ALI_TONGYI_EMBEDDING_V3 = "text-embedding-v3"
+ALI_TONGYI_EMBEDDING_V4 = "text-embedding-v4"
 
 
 
