@@ -7,12 +7,10 @@ import json
 import chromadb
 from chromadb.config import Settings
 
-from common_ai.ai_variable import ALI_TONGYI_EMBEDDING_V4
-from models import *
-
+from common_ai.ai_variable import ALI_TONGYI_EMBEDDING_V4, get_normal_client
 
 # 1、读取文件准备处理
-with open('../../../Data/train.json', 'r', encoding='utf-8') as f:
+with open('../../Data/train.json', 'r', encoding='utf-8') as f:
     data = [json.loads(line) for line in f.readlines()]
 
 #   instruction -> 症状描述；
@@ -75,7 +73,6 @@ class MyVectorDBConnector:
         #get_or_create_collection 方法用于获取或创建一个集合，如果集合不存在则创建一个新集合。
         self.collection = chroma_client.get_or_create_collection(name=collection_name)
         # 定义一个函数，用于将文本转换为向量表示，并返回一个包含向量表示的列表。
-
         self.client = get_normal_client()
 
 
