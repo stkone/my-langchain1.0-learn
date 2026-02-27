@@ -35,7 +35,7 @@ from common_ai.ai_variable import ALI_TONGYI_API_KEY_OS_VAR_NAME
 #---------------------------------以下为 第一部分：文档处理阶段——索引前阶段----------------------------------------------------#
 
 # 1. 指定要加载的Word文档路径
-loader = Docx2txtLoader("../../../Data/人事管理流程.docx")
+loader = Docx2txtLoader("../../Data/人事管理流程.docx")
 
 # 2. 加载文档、转换格式化成document
 documents = loader.load()
