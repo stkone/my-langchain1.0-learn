@@ -78,7 +78,7 @@ llm_embeddings = DashScopeEmbeddings(
 
 # 3.初始化文档加载器 - 加载待处理的原始文档
 # 这里加载的是DeepSeek的百度百科介绍文档
-loader = TextLoader("../../Data/deepseek百度百科.txt", encoding="utf-8")
+loader = TextLoader("../Data/deepseek百度百科.txt", encoding="utf-8")
 # 加载文档到内存中
 docs = loader.load()
 

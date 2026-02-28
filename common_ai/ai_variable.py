@@ -21,6 +21,20 @@ ALI_TONGYI_EMBEDDING_V4 = "text-embedding-v4"
 
 ALI_TONGYI_RERANK_MODEL = "gte-rerank-v2"
 
+ALI_TONGYI_API_KEY_SYSVAR_NAME = "DASHSCOPE_API_KEY"
+ALI_TONGYI_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+ALI_TONGYI_MAX_MODEL = "qwen-max-latest"
+ALI_TONGYI_DEEPSEEK_R1 = "deepseek-r1"
+ALI_TONGYI_DEEPSEEK_V3 = "deepseek-v3"
+ALI_TONGYI_REASONER_MODEL = "qvq-max-latest"
+ALI_TONGYI_EMBEDDING = "text-embedding-v3"
+ALI_TONGYI_RERANK = "gte-rerank-v2"
+DEEPSEEK_API_KEY_OS_VAR_NAME = "Deepseek_Key"
+DEEPSEEK_URL = "https://api.deepseek.com/v1"
+DEEPSEEK_CHAT_MODEL = "deepseek-chat"
+DEEPSEEK_REASONER_MODEL = "deepseek-reasoner"
+
+
 # 使用原生api获得指定平台的客户端 (默认是：阿里通义千问)
 def get_normal_client(api_key=os.getenv(ALI_TONGYI_API_KEY_OS_VAR_NAME),
                       base_url=ALI_TONGYI_URL,

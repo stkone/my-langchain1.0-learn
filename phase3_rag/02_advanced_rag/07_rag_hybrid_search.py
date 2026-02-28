@@ -75,7 +75,7 @@ def pretty_print_docs(docs):
 # - 重叠(ch_overlap)确保语义连贯性，防止关键信息被截断
 
 # 加载文档
-loader = TextLoader("../../Data/deepseek百度百科.txt", encoding="utf-8")
+loader = TextLoader("../Data/deepseek百度百科.txt", encoding="utf-8")
 # 参数说明：
 # - file_path: 文档路径，支持相对路径
 # - encoding: 文件编码，中文文档通常使用"utf-8"
