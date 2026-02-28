@@ -79,7 +79,7 @@ def pretty_print_docs(docs):
 # 这里使用较大的chunk_size(1024)故意制造"文档包含无关内容"的场景，
 # 以展示上下文压缩的价值
 
-documents = TextLoader("../../Data/deepseek百度百科.txt", encoding="utf-8").load()
+documents = TextLoader("../Data/deepseek百度百科.txt", encoding="utf-8").load()
 text_splitter = RecursiveCharacterTextSplitter(
     chunk_size=1024,   # 较大的块大小，单个块可能包含多个主题
     chunk_overlap=100  # 保持上下文连贯性

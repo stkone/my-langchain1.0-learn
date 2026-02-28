@@ -58,7 +58,7 @@ llm_embeddings = DashScopeEmbeddings(
 
 # ==================== 文档加载和预处理 ====================
 # 加载DeepSeek相关文档
-loader = TextLoader("../../Data/deepseek百度百科.txt", encoding="utf-8")
+loader = TextLoader("../Data/deepseek百度百科.txt", encoding="utf-8")
 docs = loader.load()
 
 # 创建文档分割器，并分割文档
